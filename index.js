@@ -42,23 +42,18 @@ function total() {
       var sum = total.reduce(function(a, b) { return a + b; }, 0);
     return sum;
 }
-
 function removeFromCart(item) {
-  var itemInCart = false
-  for(var i = 0; i < cart.length; i++){
-    if (cart[i].hasOwnProperty(item)) {
-      itemInCart = true;
-      cart.splice(i, 1);
-    }
+    if (cart.includes(item)){
+     var index= cart.indexOf(item);
+     cart.splice(index,1);
+     return cart;
+           }
+      
+  else{
+    return "That item is not in your cart.";
   }
-  if (!itemInCart) {
-    console.log("That item is not in your cart.");
-  }
-  return cart
 }
-
-
-
+  
 
 
 function placeOrder(cardNumber) {
