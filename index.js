@@ -43,7 +43,6 @@ function total() {
     return sum;
 }
 function removeFromCart(item) {
-  // write your code here
   var message;
   for (let i = 0; i < cart.length; i++) {
     if (cart[i].itemName === item) {
@@ -53,8 +52,6 @@ function removeFromCart(item) {
   }
   return ("That item is not in your cart.");
 }
-
-
 
 
 function placeOrder(cardNumber) {
